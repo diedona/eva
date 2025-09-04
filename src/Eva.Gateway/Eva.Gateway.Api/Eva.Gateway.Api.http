@@ -1,0 +1,6 @@
+@Eva.Gateway.Api_HostAddress = http://localhost:5118
+
+GET {{Eva.Gateway.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
