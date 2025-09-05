@@ -1,0 +1,5 @@
+# Sort System directives before others
+dotnet_sort_system_directives_first = true
+
+# Remove unnecessary using directives on format
+dotnet_separate_import_directive_groups = true
