@@ -1,3 +1,4 @@
+using System.Threading.Channels;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -11,4 +12,3 @@ public sealed class ListProductsHandler
         return TypedResults.NoContent();
     }
 }
-
