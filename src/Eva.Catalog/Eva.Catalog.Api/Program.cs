@@ -1,9 +1,11 @@
+using Eva.Catalog.Api.Core.Telemetry;
 using Eva.Catalog.Api.Features.Products;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddOpenTelemetryWithConfiguration();
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
