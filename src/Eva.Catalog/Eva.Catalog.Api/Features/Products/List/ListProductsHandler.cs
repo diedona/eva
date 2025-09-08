@@ -1,8 +1,8 @@
-using System;
 using System.Threading.Tasks;
-using Eva.Catalog.Api.Features.Products.List;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
+
+namespace Eva.Catalog.Api.Features.Products.List;
 
 public sealed class ListProductsHandler
 {

@@ -1,3 +1,4 @@
+using Eva.Catalog.Api.Features.Products.List;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Routing;
 
