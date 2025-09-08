@@ -1,4 +1,6 @@
+using Eva.Catalog.Api.Features.Products;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,10 +18,7 @@ app.UseSwaggerUI(options =>
     options.SwaggerEndpoint("/openapi/v1.json", "Eva Catalog v1");
 });
 
-app.MapGet("/api/hello", () =>
-{
-    return "Hello world!";
-});
+app.AddProductsEndpoints();
 
 app.UseHttpsRedirection();
 
