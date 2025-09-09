@@ -9,8 +9,6 @@ namespace Eva.Catalog.Api.Platform.Telemetry;
 
 public static class OpenTelemetryExtensions
 {
-    private static readonly Assembly _CurrentAssembly = Assembly.GetExecutingAssembly();
-
     public static void AddOpenTelemetryWithConfiguration(
         this IServiceCollection services,
         IHostApplicationBuilder builder

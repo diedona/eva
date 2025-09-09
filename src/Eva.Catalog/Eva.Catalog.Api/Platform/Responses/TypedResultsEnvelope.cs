@@ -6,5 +6,5 @@ namespace Eva.Catalog.Api.Platform.Responses;
 public static class TypedResultsEnvelope
 {
     public static Ok<ApiResponse<T>> OkEnvelope<T>(T data)
-        => TypedResults.Ok(data.ToApiResponse());
+        => TypedResults.Ok(new ApiResponse<T>(data));
 }
