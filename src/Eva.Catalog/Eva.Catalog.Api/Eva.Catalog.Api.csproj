@@ -17,4 +17,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="9.0.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="../Eva.Catalog.Application/Eva.Catalog.Application.csproj" />
+    <ProjectReference Include="../Eva.Catalog.Domain/Eva.Catalog.Domain.csproj" />
+    <ProjectReference Include="../Eva.Catalog.Infrastructure/Eva.Catalog.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

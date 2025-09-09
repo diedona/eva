@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="../Eva.Catalog.Domain/Eva.Catalog.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
