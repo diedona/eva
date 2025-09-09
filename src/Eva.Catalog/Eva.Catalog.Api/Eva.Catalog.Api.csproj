@@ -26,4 +26,8 @@
     <ProjectReference Include="../Eva.Catalog.Infrastructure/Eva.Catalog.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Platform/Filters/" />
+  </ItemGroup>
+
 </Project>

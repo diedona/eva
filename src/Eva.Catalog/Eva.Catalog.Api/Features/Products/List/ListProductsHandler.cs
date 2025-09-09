@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Eva.Catalog.Api.Platform.Responses;
@@ -13,19 +13,22 @@ namespace Eva.Catalog.Api.Features.Products.List;
 public sealed class ListProductsHandler
 {
     public static async Task<
-        Results<Ok<ApiResponse<List<ProductsListResponse>>>, NotFound>
+        Results<
+            Ok<ApiResponse<IEnumerable<ListProductsResponse>>>,
+            NotFound
+        >
     > HandleAsync(
         HttpContext context,
-        CancellationToken ctoken,
+        CancellationToken cancellationToken,
         ILogger<ListProductsHandler> log
     )
     {
-        var products = new List<ProductsListResponse>()
+        var products = new List<ListProductsResponse>()
         {
             new(Guid.NewGuid(), "Batata"),
             new(Guid.NewGuid(), "Arroz"),
         };
 
-        return TypedResults.Ok(products.ToApiResponse());
+        return TypedResultsEnvelope.OkEnvelope(products.AsEnumerable());
     }
 }

@@ -2,4 +2,4 @@ using System;
 
 namespace Eva.Catalog.Api.Features.Products.List;
 
-public record ProductsListResponse(Guid Id, string Name);
+public record ListProductsResponse(Guid Id, string Name);
