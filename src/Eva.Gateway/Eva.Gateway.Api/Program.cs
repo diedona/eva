@@ -1,3 +1,4 @@
+using Eva.Gateway.Api.Features.Authentications;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
@@ -13,6 +14,9 @@ builder.Host.UseSerilog((ctx, config) => config.ReadFrom.Configuration(ctx.Confi
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
+builder.Services.AddAuthentication().AddJwtBearer();
+builder.Services.AddAuthorization();
+
 var app = builder.Build();
 
 app.UseSerilogRequestLogging();
@@ -23,6 +27,12 @@ app.UseHttpsRedirection();
 
 app.MapOpenApi();
 
+app.UseCors();
+app.UseAuthentication();
+app.UseAuthorization();
+
 app.MapReverseProxy();
+
+app.AddAuthenticationsEndpoints();
 
 app.Run();
