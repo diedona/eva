@@ -9,7 +9,6 @@
   <ItemGroup>
     <Folder Include="Products/Errors/" />
     <Folder Include="Products/Services/" />
-    <Folder Include="Products/ValueObjects/" />
   </ItemGroup>
 
 </Project>
