@@ -1,6 +1,6 @@
 using Eva.Catalog.Domain.SharedKernel.Abstractions;
 
-namespace Eva.Catalog.Domain.Products.ValueObjects;
+namespace Eva.Catalog.Domain.Aggregates.Products.ValueObjects;
 
 public readonly record struct ProductId(Guid Value) : IValueObject
 {
