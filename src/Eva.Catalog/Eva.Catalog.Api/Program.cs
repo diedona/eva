@@ -1,6 +1,6 @@
-using Eva.Catalog.Api.Features.Products;
+using Eva.Catalog.Api.Features.Product;
+using Eva.Catalog.Api.Platform.Extensions;
 using Eva.Catalog.Api.Platform.Filters;
-using Eva.Catalog.Api.Platform.Telemetry;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
@@ -32,6 +32,6 @@ app.UseSwaggerUI(options =>
     options.SwaggerEndpoint("/openapi/v1.json", "Eva Catalog v1");
 });
 
-app.AddProductsEndpoints();
+app.AddProductEndpoints();
 
 app.Run();

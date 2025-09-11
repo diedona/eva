@@ -1,4 +1,4 @@
-namespace Eva.Gateway.Api.Platform.Configurations.Options;
+namespace Eva.Gateway.Api.Platform.Options;
 
 public sealed class JwtOptions
 {

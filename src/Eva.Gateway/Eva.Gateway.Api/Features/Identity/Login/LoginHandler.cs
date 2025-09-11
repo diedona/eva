@@ -2,9 +2,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
-namespace Eva.Gateway.Api.Features.Authentications.Login;
+namespace Eva.Gateway.Api.Features.Identity.Login;
 
-public static class LoginAuthenticationsHandler
+public static class LoginHandler
 {
     public static async Task HandleAsync(
         HttpContext context,

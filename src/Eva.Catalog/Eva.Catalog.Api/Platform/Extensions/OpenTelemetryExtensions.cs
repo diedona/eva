@@ -4,7 +4,7 @@ using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 
-namespace Eva.Catalog.Api.Platform.Telemetry;
+namespace Eva.Catalog.Api.Platform.Extensions;
 
 public static class OpenTelemetryExtensions
 {

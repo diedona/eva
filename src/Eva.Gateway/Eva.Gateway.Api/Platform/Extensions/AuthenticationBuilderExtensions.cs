@@ -1,12 +1,12 @@
 using System;
 using System.Text;
-using Eva.Gateway.Api.Platform.Configurations.Options;
+using Eva.Gateway.Api.Platform.Options;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Eva.Gateway.Api.Platform.Authentications;
+namespace Eva.Gateway.Api.Platform.Extensions;
 
 public static class AuthenticationBuilderExtensions
 {

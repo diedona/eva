@@ -1,5 +1,5 @@
-using Eva.Gateway.Api.Features.Authentications;
-using Eva.Gateway.Api.Platform.Authentications;
+using Eva.Gateway.Api.Features.Identity;
+using Eva.Gateway.Api.Platform.Extensions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
@@ -41,6 +41,6 @@ app.UseAuthorization();
 
 app.MapReverseProxy();
 
-app.AddAuthenticationsEndpoints();
+app.AddIdentityEndpoints();
 
 app.Run();
