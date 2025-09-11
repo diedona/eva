@@ -15,9 +15,12 @@ builder.Host.UseSerilog((ctx, config) =>
     config.ReadFrom.Configuration(ctx.Configuration)
 );
 
+builder.Services.AddOpenTelemetryWithConfiguration(builder);
+
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+builder.Services.AddSwaggerGen();
 
 builder.Services
     .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -27,13 +30,15 @@ builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
-app.UseSerilogRequestLogging();
-
 app.UseRouting();
 
 app.UseHttpsRedirection();
 
 app.MapOpenApi();
+app.UseSwaggerUI(options =>
+{
+    options.SwaggerEndpoint("/openapi/v1.json", "Eva Catalog v1");
+});
 
 app.UseCors();
 app.UseAuthentication();

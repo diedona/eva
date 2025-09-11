@@ -1,10 +1,9 @@
-using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
-namespace Eva.Catalog.Api.Platform.Filters;
+namespace Eva.Gateway.Api.Platform.Middlewares;
 
 public sealed class TraceIdMiddleware
 {
