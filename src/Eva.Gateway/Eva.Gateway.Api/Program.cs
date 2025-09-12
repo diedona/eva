@@ -1,4 +1,5 @@
 using Eva.Gateway.Api.Features.Identity;
+using Eva.Gateway.Api.Platform.ExceptionsHandler;
 using Eva.Gateway.Api.Platform.Extensions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -26,6 +27,10 @@ builder.Services
     .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddConfiguredJwtBearer(builder.Configuration);
 
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+
+builder.Services.AddProblemDetails();
+
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
@@ -47,5 +52,7 @@ app.UseAuthorization();
 app.MapReverseProxy();
 
 app.AddIdentityEndpoints();
+
+app.UseExceptionHandler();
 
 app.Run();
