@@ -1,3 +1,4 @@
+using Eva.Gateway.Api.Features.Identity.LoggedInfo;
 using Eva.Gateway.Api.Features.Identity.Login;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Routing;
@@ -10,6 +11,7 @@ public static class IdentityModule
     {
         var group = app.MapGroup("identity");
 
-        group.MapGet("/login", LoginHandler.HandleAsync);
+        group.MapPost("/login", LoginHandler.HandleAsync);
+        group.MapGet("/me", LoggedInfoHandler.HandleAsync);
     }
 }
