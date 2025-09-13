@@ -1,6 +1,7 @@
 using Eva.Gateway.Api.Features.Identity;
 using Eva.Gateway.Api.Platform.Exceptions.Handlers;
 using Eva.Gateway.Api.Platform.Extensions;
+using Eva.Gateway.Api.Platform.Middlewares;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
@@ -36,6 +37,8 @@ builder.Services.AddAuthorization();
 var app = builder.Build();
 
 app.UseRouting();
+
+app.UseMiddleware<TraceIdMiddleware>();
 
 app.UseHttpsRedirection();
 
