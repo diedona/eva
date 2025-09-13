@@ -1,5 +1,5 @@
 using Eva.Gateway.Api.Features.Identity;
-using Eva.Gateway.Api.Platform.ExceptionsHandler;
+using Eva.Gateway.Api.Platform.Exceptions.Handlers;
 using Eva.Gateway.Api.Platform.Extensions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;

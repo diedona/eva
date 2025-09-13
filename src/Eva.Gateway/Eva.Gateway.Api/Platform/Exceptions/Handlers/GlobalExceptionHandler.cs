@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace Eva.Gateway.Api.Platform.ExceptionsHandler;
+namespace Eva.Gateway.Api.Platform.Exceptions.Handlers;
 
 public class GlobalExceptionHandler : IExceptionHandler
 {
