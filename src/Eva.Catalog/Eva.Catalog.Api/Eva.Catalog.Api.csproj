@@ -8,11 +8,6 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.8" />
-    <PackageReference Include="OpenTelemetry.Exporter.Console" Version="1.12.0" />
-    <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.12.0" />
-    <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.12.0" />
-    <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.12.0" />
-    <PackageReference Include="OpenTelemetry.Instrumentation.Http" Version="1.12.0" />
     <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
     <PackageReference Include="Serilog.Settings.Configuration" Version="9.0.0" />
     <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
@@ -21,13 +16,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="../../Eva.Platform/Eva.Platform.csproj" />
     <ProjectReference Include="../Eva.Catalog.Application/Eva.Catalog.Application.csproj" />
     <ProjectReference Include="../Eva.Catalog.Domain/Eva.Catalog.Domain.csproj" />
     <ProjectReference Include="../Eva.Catalog.Infrastructure/Eva.Catalog.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Platform/Extensions/" />
     <Folder Include="Platform/Filters/" />
+    <Folder Include="Platform/Middlewares/" />
   </ItemGroup>
 
 </Project>

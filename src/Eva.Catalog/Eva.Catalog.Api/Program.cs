@@ -1,6 +1,6 @@
 using Eva.Catalog.Api.Features.Product;
-using Eva.Catalog.Api.Platform.Extensions;
-using Eva.Catalog.Api.Platform.Filters;
+using Eva.Platform.Extensions;
+using Eva.Platform.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
@@ -11,7 +11,7 @@ builder.Host.UseSerilog((ctx, config) =>
     config.ReadFrom.Configuration(ctx.Configuration)
 );
 
-builder.Services.AddOpenTelemetryWithConfiguration(builder);
+builder.Services.AddEvaOpenTelemetry(builder);
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

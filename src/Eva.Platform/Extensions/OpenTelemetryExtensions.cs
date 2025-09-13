@@ -3,11 +3,11 @@ using Microsoft.Extensions.Hosting;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 
-namespace Eva.Gateway.Api.Platform.Extensions;
+namespace Eva.Platform.Extensions;
 
 public static class OpenTelemetryExtensions
 {
-    public static void AddOpenTelemetryWithConfiguration(
+    public static void AddEvaOpenTelemetry(
         this IServiceCollection services,
         IHostApplicationBuilder builder
     )

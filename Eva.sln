@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eva.Catalog.Domain", "src\E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eva.Catalog.Application", "src\Eva.Catalog\Eva.Catalog.Application\Eva.Catalog.Application.csproj", "{8F64B3F6-1203-4D41-ADD3-6E8B9A7A6F5D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eva.Platform", "src\Eva.Platform\Eva.Platform.csproj", "{5F3C6CA2-7709-4C35-82D5-21B283B8F6A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{8F64B3F6-1203-4D41-ADD3-6E8B9A7A6F5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F64B3F6-1203-4D41-ADD3-6E8B9A7A6F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F64B3F6-1203-4D41-ADD3-6E8B9A7A6F5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F3C6CA2-7709-4C35-82D5-21B283B8F6A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F3C6CA2-7709-4C35-82D5-21B283B8F6A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F3C6CA2-7709-4C35-82D5-21B283B8F6A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F3C6CA2-7709-4C35-82D5-21B283B8F6A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,5 +94,6 @@ Global
 		{C5EE4EA4-59D9-401B-8D45-18149C6E3C75} = {FD1EA789-F0C0-483A-B367-B19131D907AE}
 		{A668B12E-0C67-4405-858C-73D896F40CCF} = {FD1EA789-F0C0-483A-B367-B19131D907AE}
 		{8F64B3F6-1203-4D41-ADD3-6E8B9A7A6F5D} = {FD1EA789-F0C0-483A-B367-B19131D907AE}
+		{5F3C6CA2-7709-4C35-82D5-21B283B8F6A0} = {E7F8DDF0-39FA-4BEA-9BE7-D751B3635198}
 	EndGlobalSection
 EndGlobal
