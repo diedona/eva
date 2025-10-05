@@ -2,7 +2,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 namespace Eva.Gateway.Api.Features.Identity.Login;
@@ -19,7 +18,7 @@ internal static class LoginHandler
         LoginRequest request
     )
     {
-        log.LogInformation("@{request}", request);
+        log.LogInformation("{@request}", request);
         return TypedResults.Ok($"oh, hello there {request.Username} =)");
     }
 }
